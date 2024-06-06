@@ -1,8 +1,11 @@
 ## Dataset
 
-|         | Train  | Dev | Test | Intent Labels | Slot Labels |
-| ------- | ------ | --- | ---- | ------------- | ----------- |
-| Korean  | 4,478  | 500 | 893  | 21            | 120         |
+|  LANGUAGE  | Train  |  Dev  | Test  | Intent Labels | Slot Labels |
+| ---------- | ------ | ----- | ----- | ------------- | ----------- |
+|   Korean   | 4,478  |  500  |  893  |       21      |     120     |
+|   English  | 10,880 | 3,627 | 3,627 |       21      |     120     |
+|  Japanese  | 13,198 | 4,400 | 4,400 |       21      |     120     |
+|    Zh_CN   | 13,357 | 4,453 | 4,453 |       21      |     120     |
 
 
 ## Training & Evaluation
