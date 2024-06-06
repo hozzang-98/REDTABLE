@@ -96,9 +96,17 @@ class JointProcessor(object):
             intent_label = self.intent_labels.index(intent) if intent in self.intent_labels else self.intent_labels.index("UNK")
             # 3. slot
             slot_labels = []
+          
             for s in slot.split():
                 slot_labels.append(self.slot_labels.index(s) if s in self.slot_labels else self.slot_labels.index("UNK"))
 
+            # print(i)
+            # print(text)
+            # print(words)
+            # print(slot_labels)
+            # print(len(words))
+            # print(len(slot_labels))
+        
             assert len(words) == len(slot_labels)
             examples.append(InputExample(guid=guid, words=words, intent_label=intent_label, slot_labels=slot_labels))
         return examples
@@ -180,7 +188,7 @@ def convert_examples_to_features(examples, max_seq_len, tokenizer,
         assert len(attention_mask) == max_seq_len, "Error with attention mask length {} vs {}".format(len(attention_mask), max_seq_len)
         assert len(token_type_ids) == max_seq_len, "Error with token type length {} vs {}".format(len(token_type_ids), max_seq_len)
         assert len(slot_labels_ids) == max_seq_len, "Error with slot labels length {} vs {}".format(len(slot_labels_ids), max_seq_len)
-
+        
         intent_label_id = int(example.intent_label)
 
         if ex_index < 5:

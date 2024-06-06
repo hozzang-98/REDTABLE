@@ -204,7 +204,9 @@ if __name__ == "__main__":
     init_logger()
     parser = argparse.ArgumentParser()
 
+    # parser.add_argument("--input_file", default="sample_pred_in.txt", type=str, help="Input file for prediction")
     parser.add_argument("--input_file", default="sample_pred_in.txt", type=str, help="Input file for prediction")
+    # parser.add_argument("--output_file", default="sample_pred_out.txt", type=str, help="Output file for prediction")
     parser.add_argument("--output_file", default="sample_pred_out.txt", type=str, help="Output file for prediction")
     parser.add_argument("--model_dir", default="./model_save/ko", type=str, help="Path to save, load model")
     parser.add_argument("--lang", default="ko", type=str, help="Type of language you want to train, deafult is 'ko'")

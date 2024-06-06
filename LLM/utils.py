@@ -7,19 +7,21 @@ import numpy as np
 from seqeval.metrics import precision_score, recall_score, f1_score
 
 from transformers import ElectraConfig, BertConfig
-from transformers import ElectraTokenizer
+from transformers import BertTokenizer, ElectraTokenizer
 from model.tokenization_kobert import KoBertTokenizer
+from transformers import AutoTokenizer
 
 from model import JointElectra, JointBert
 
 MODEL_CLASSES = {
     'electra': (ElectraConfig, JointElectra, ElectraTokenizer),
-    'kobert' : (BertConfig, JointBert, KoBertTokenizer),
+    'bert' : (BertConfig, JointBert, BertTokenizer),
+
 }
 
 MODEL_PATH_MAP = {
-    'electra': 'monologg/koelectra-base-v3-discriminator',
-    'kobert': 'monologg/kobert'
+    'electra': 'google/electra-base-discriminator',
+    'bert': 'bert-base-chinese'
 }
 
 def get_intent_labels(args):

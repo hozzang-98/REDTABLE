@@ -213,7 +213,7 @@ class Trainer(object):
 
     def save_model(self):
         # Save model checkpoint (Overwrite)
-        save_path = os.path.join(self.args.model_dir,self.args.lang,self.args.model_type)
+        save_path = os.path.join(self.args.model_dir,self.args.lang,self.args.model_type) # /model_save/jp/bert
         if not os.path.exists(save_path):
             os.makedirs(save_path)
         model_to_save = self.model.module if hasattr(self.model, 'module') else self.model
