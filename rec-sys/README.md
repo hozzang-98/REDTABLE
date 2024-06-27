@@ -15,5 +15,5 @@
 
 |               | Collab. Filtering  |          Contents-Based          |  MAP@5 (%) | Recall@5 (%)|
 | ------------- | ------------------ | -------------------------------- | ---------- | ----------- |
-| Hybrid Recsys | K-Means Clustering | Product TAG + Pearson Similarity |    71.7    |     74.9    |
+| Hybrid Recsys | K-Means Clustering | Product TAG + Pearson Similarity |    55.7    |     61.0    |
 
